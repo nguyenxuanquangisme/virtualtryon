@@ -33,58 +33,58 @@ app = Flask(__name__)
 products = [
     {
         'id': 1,
-        'name': 'T-shirt 1',
-        'price': '200.000',
+        'name': 'DC | DBZ Vegeta T-Shirt - White',
+        'price': '450.000₫',
         'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-1.jpg',
         'description': 'Mô tả chi tiết về T-shirt 1.'
     },
     {
         'id': 2,
-        'name': 'T-shirt 2',
-        'price': '200.000',
+        'name': 'DC | DBZ Frieza T-Shirt - Black',
+        'price': '450.000₫',
         'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-2.jpg',
         'description': 'Mô tả chi tiết về T-shirt 2.'
     },
     {
         'id': 3,
-        'name': 'T-shirt 3',
-        'price': '200.000',
-        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-3.jpg',
+        'name': 'Nothing Changes T-Shirt - Yellow',
+        'price': '320.000₫',
+        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt12.png',
         'description': 'Mô tả chi tiết về T-shirt 3.'
     },
     {
         'id': 4,
-        'name': 'T-shirt 4',
-        'price': '200.000',
-        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-4.jpg',
+        'name': 'More Money More Problems',
+        'price': '390.000₫',
+        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt13.png',
         'description': 'Mô tả chi tiết về T-shirt 4.'
     },
     {
         'id': 5,
-        'name': 'T-shirt 5',
+        'name': 'Jersey DC x GAM Worlds 2024 ',
         'price': '200.000',
-        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-5.jpg',
+        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt16.png',
         'description': 'Mô tả chi tiết về T-shirt 5.'
     },
     {
         'id': 6,
-        'name': 'T-shirt 6',
-        'price': '200.000',
-        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-6.jpg',
+        'name': 'Thương Bạn Gái T-shirt',
+        'price': '390.000₫',
+        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt14.png',
         'description': 'Mô tả chi tiết về T-shirt 6.'
     },
     {
         'id': 7,
-        'name': 'T-shirt 7',
-        'price': '200.000',
-        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-7.jpg',
+        'name': 'If I Play I Play To Win T-Shirt ',
+        'price': '320.000₫',
+        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt15.png',
         'description': 'Mô tả chi tiết về T-shirt 7.'
     },
     {
         'id': 8,
-        'name': 'T-shirt 8',
-        'price': '200.000',
-        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-8.jpg',
+        'name': 'DirtyCoins Wavy Logo T-Shirt',
+        'price': '390.000₫',
+        'image': 'https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt17.png',
         'description': 'Mô tả chi tiết về T-shirt 8.'
     },
 ]
@@ -99,6 +99,7 @@ def index():
 @app.route('/product/<int:product_id>',methods=['GET', 'POST'])
 def product_detail(product_id):
     product = next((item for item in products if item['id'] == product_id), None)
+    print(product)
     if request.method == 'POST':
         # Get the files from the form
         model_image = request.files['model_image']
