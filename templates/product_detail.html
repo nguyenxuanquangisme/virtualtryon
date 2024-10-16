@@ -145,16 +145,8 @@
 
             </div>
             <div>
-                <h2>Sample Cloth Images:</h2>
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-1.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-2.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-3.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-4.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-5.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-6.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-7.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-                <img src="https://fptvton.s3.ap-southeast-2.amazonaws.com/static/product/t-shirt-8.jpg" alt="Sample Cloth 1" onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
-
+                <h2> T-shirt image </h2>
+                    <img src="{{ product.image }}" alt="{{ product.name }}" style="width: 320px;"  onclick="setSampleImage('cloth_preview', this.src, 'cloth_image')">
             </div>
         </div>
 
